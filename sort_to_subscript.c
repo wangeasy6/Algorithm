@@ -1,5 +1,5 @@
 /*
-*   FUNC: ÄÚÈÝ²»±ä£¬½«ÅÅÐòºóµÄÏÂ±ê±£´æµ½Ò»¸öÊý×éÖÐ¡£
+*   FUNC: å†…å®¹ä¸å˜ï¼Œå°†æŽ’åºåŽçš„ä¸‹æ ‡ä¿å­˜åˆ°ä¸€ä¸ªæ•°ç»„ä¸­ã€‚
 */
 #include <stdio.h>
 #define MAX_NUM 12
@@ -20,7 +20,7 @@ int main()
             Content_order[i] = i;
             for (n=i;n>=1;n--)
             {
-                if (Content[Content_order[n]] < Content[Content_order[n-1]])  //ºóÃæÈç¹û¸üÐ¡£¬½»»»
+                if (Content[Content_order[n]] < Content[Content_order[n-1]])  //åŽé¢å¦‚æžœæ›´å°ï¼Œäº¤æ¢
                 {
                     t = Content_order[n-1];
                     Content_order[n-1] = Content_order[n];
