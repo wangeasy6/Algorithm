@@ -1,50 +1,46 @@
 /*
-*   FUNC: 内容不变，将排序后的下标保存到一个数组中。
+*   Title: 排列索引
+*   From: 工程需求
+*   正题: 内容不变，将排序后的下标保存到一个数组中，之后按排序下标索引达到排序的目的
 */
 #include <stdio.h>
 #define MAX_NUM 12
 
 int main()
 {
-    int Count = 0;
-    int i,n,t;
+    int i,n;
     int Content_order[MAX_NUM];
-    int Content[MAX_NUM] = {1,2,5,4,3,6,9,8};
+    int Content[MAX_NUM] = {5,1,2,4,3,6,9,8,4,65,7,3},*tmp;
 
-    Count = 8;
-    if (Count > 1)
+    Content_order[0] = 0;
+    for (i=1; i<MAX_NUM; i++)
     {
-        Content_order[0] = 0;
-        for (i=1; i<Count; i++)
+        tmp = &Content[i];
+        for (n=i-1; n>=0; n--)
         {
-            Content_order[i] = i;
-            for (n=i;n>=1;n--)
+            if (Content[Content_order[n]] > *tmp)  //后面如果更小，交换
             {
-                if (Content[Content_order[n]] < Content[Content_order[n-1]])  //后面如果更小，交换
-                {
-                    t = Content_order[n-1];
-                    Content_order[n-1] = Content_order[n];
-                    Content_order[n] = t;
-                }
-                else
-                {
-                    break;
-                }
+                Content_order[n+1] = Content_order[n];
+            }
+            else
+            {
+                break;
             }
         }
-      }
+        Content_order[n+1] = i;
+    }
 
     printf("order: ");
-    for (i=0;i<Count; i++)
+    for (i=0; i<MAX_NUM; i++)
     {
-      printf("%d,",Content_order[i]);
+        printf("%d,",Content_order[i]);
     }
     printf("\n");
 
     printf("Content: ");
-    for (i=0;i<Count; i++)
+    for (i=0; i<MAX_NUM; i++)
     {
-      printf("%d,",Content[Content_order[i]]);
+        printf("%d,",Content[Content_order[i]]);
     }
     printf("\n");
 }
