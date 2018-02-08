@@ -9,12 +9,12 @@
 
 #define FILE_NAME "1G.txt"
 #define FILE_SIZE (1024*1024*1024)
-#define TXT_MAX_LEN 1024
+#define TXT_LINE_LEN 1024
 
 int main()
 {
       FILE *fd = NULL;
-      char str[TXT_MAX_LEN] = {0};
+      char str[TXT_LINE_LEN] = {0};
       int file_size = 0, line = 0;
       int i = 0, str_len = 0,t = 0;
 
@@ -28,7 +28,7 @@ int main()
       srand(time(0));
       do
       {
-            str_len = rand()%(TXT_MAX_LEN-1);
+            str_len = rand()%(TXT_LINE_LEN-1);
             if(!str_len)
                   continue;
             for (i=0;i < str_len; i++)
