@@ -7,8 +7,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define FILE_NAME "1G.txt"
-#define FILE_SIZE (1024*1024*1024)
+#define FILE_NAME "100G.txt"
+#define FILE_SIZE (200*1024*1024)
 #define TXT_LINE_LEN 1024
 
 int main()
@@ -54,7 +54,7 @@ int main()
             line ++;
       }
       while( file_size < FILE_SIZE);
-      
+
       printf("Creat Done: File_Name:%s, File_Size:%d, Line:%d\n", FILE_NAME, file_size, line);
       fclose(fd);
       return 0;
