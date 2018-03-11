@@ -8,10 +8,13 @@
       解题思路、分析(时间、空间复杂度)
 
 ### 列表
-文件名 | 描述
-:----- | :-----
-backpack.c | 背包问题
-brackets_match.c | 括号匹配
-max_common_divisor.c | 欧几里德算法求最大公约数
-sort_to_subscript.c | 下标排序
-sudoku.c | 数读
+| 文件名                       | 描述           |
+| :------------------------ | :----------- |
+| backpack.c                | 背包问题         |
+| brackets_match.c          | 括号匹配         |
+| max_common_divisor.c      | 欧几里德算法求最大公约数 |
+| sort_to_subscript.c       | 下标排序         |
+| mult_decode.c             | 乘数密码         |
+| sudoku.c                  | 数读           |
+| factorial_of_big_number_* | 大数阶乘         |
+| 24_points.c               | 38 24纸牌游戏    |
